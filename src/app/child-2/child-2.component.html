@@ -1,3 +1,12 @@
 <div class="min-h-[20rem] w-60 mx-auto">
   <h1>Child two</h1>
 </div>
+
+<ng-container [ngTemplateOutlet]="error"></ng-container>
+
+
+<ng-template #error>
+  <div>
+    vai shechema shena haa
+  </div>
+</ng-template>

@@ -4,7 +4,6 @@ import {Component, ViewEncapsulation} from '@angular/core';
   selector: 'app-child-2',
   templateUrl: './child-2.component.html',
   styleUrls: ['./child-2.component.css'],
-  encapsulation: ViewEncapsulation.None
 })
 export class Child2Component {
 
