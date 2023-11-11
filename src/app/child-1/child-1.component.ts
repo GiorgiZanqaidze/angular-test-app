@@ -1,30 +1,19 @@
-import {Component, HostListener, ViewEncapsulation} from '@angular/core';
+import {Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-child-1',
   templateUrl: './child-1.component.html',
   styleUrls: ['./child-1.component.css'],
 })
-export class Child1Component {
+export class Child1Component implements OnInit{
 
-  text!: string
-
-  @HostListener("window:keydown", ["$event"])
-  onMouseEnter(event: KeyboardEvent) {
-    this.text += event.key
-
-    if (this.text == "ControlAlt") {
-      console.log(this.text)
-    }
-
-    this.text = ""
-
-    console.log(event.key)
-
+  constructor(private renderer: Renderer2, private elementRef: ElementRef) {
   }
 
-  mouseMove() {
-    console.log('gio2')
+  @ViewChild('giorgi') gio!: ViewChild
+
+  ngOnInit() {
+    console.log(this.gio)
   }
 
 }

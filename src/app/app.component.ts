@@ -7,4 +7,11 @@ import {Component, ViewEncapsulation} from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-test-app';
+
+
+  user: {name: string, age: number} = {
+    name: 'giorgi',
+    age: 5
+  }
+
 }
